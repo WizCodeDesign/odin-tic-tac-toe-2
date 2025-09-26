@@ -8,11 +8,28 @@
     <title>Odin's Tic Tac Toe</title>
 </head>
 <body>
+
+    <div class="form_Container">
+        <h1>Tic Tac Toe</h1>
+        <form id="player_Form">
+            <label for="player1">Player 1 Name (X): </label>
+            <input type="text" id="player1" name="player1" required>
+            <br>
+            <label for="player2">Player 2 Name (O): </label>
+            <input type="text" id="player2" name="player2" required>
+            <br>
+            <button type="submit" id="form_Submit">Start Game</button>
+            <button type="reset" id="form_Reset">Reset Names</button>
+        </form>
+    </div>
+
     <div class="content_Container">
         <div class="game_Header">
             <h1>Tic Tac Toe</h1>
-            <p>player 1 : X | Player 2 : O</p>
+            <p><span id="player_1_Name"></span> (X) | <span id="player_2_Name"></span> (O)</p>
             <p>P1 Score : <span class="player_1_Score">X</span> | P2 Score : <span class="player_2_Score">O</span></p>
+            <p class="game_Status"></p>
+
         </div>
         <hr>
         <div class="game_Container">
@@ -30,7 +47,6 @@
         <div class="game_Footer">
             <button id="restart_Button">Restart Game</button>
             <button id="clear_Button">Clear Board</button>
-            <p class="game_Status"></p>
         </div>
 </body>
 </html>
