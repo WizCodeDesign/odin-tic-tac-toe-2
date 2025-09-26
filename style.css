@@ -21,8 +21,72 @@ hr {
     margin: 20px 0;
 }
 
-.content_Container {
+
+.form_Container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form_Container label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.form_Container input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 200px;
+}
+
+.form_Container input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form_Container #form_Submit  {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.form_Container #form_Submit:hover {
+    background-color: darkgreen;
+    transition: background-color 0.3s ease;
+}
+
+.form_Container #form_Reset  {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.form_Container #form_Reset:hover {
+    background-color: darkred;
+    transition: background-color 0.3s ease;
+}
+
+.content_Container {
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
