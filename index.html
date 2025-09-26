@@ -9,12 +9,27 @@
 </head>
 <body>
     <div class="content_Container">
-        <h1>Tic Tac Toe</h1>
-        <div class="game_Header"></div>
-        <div class="game_Container"></div>
+        <div class="game_Header">
+            <h1>Tic Tac Toe</h1>
+            <p>player 1 : X | Player 2 : O</p>
+            <p>P1 Score : <span class="player_1_Score">X</span> | P2 Score : <span class="player_2_Score">O</span></p>
+        </div>
+        <hr>
+        <div class="game_Container">
+            <div class="cells" id="cell0" data-index="0"></div>
+            <div class="cells" id="cell1" data-index="1"></div>
+            <div class="cells" id="cell2" data-index="2"></div>
+            <div class="cells" id="cell3" data-index="3"></div>
+            <div class="cells" id="cell4" data-index="4"></div>
+            <div class="cells" id="cell5" data-index="5"></div>
+            <div class="cells" id="cell6" data-index="6"></div>
+            <div class="cells" id="cell7" data-index="7"></div>
+            <div class="cells" id="cell8" data-index="8"></div>
+        </div>
+        <hr>
         <div class="game_Footer">
-            <button class="restart_Button">Restart Game</button>
-            <button class="clear_Button">Clear Board</button>
+            <button id="restart_Button">Restart Game</button>
+            <button id="clear_Button">Clear Board</button>
             <p class="game_Status"></p>
         </div>
 </body>
