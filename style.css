@@ -21,6 +21,10 @@ hr {
     margin: 20px 0;
 }
 
+/* Utility Class for JS visibility toggle */
+.hide {
+    display: none !important;
+}
 
 .form_Container {
     display: flex;
@@ -55,7 +59,7 @@ hr {
     box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-.form_Container #form_Submit  {
+.form_Container #form_Submit {
     padding: 10px 20px;
     font-size: 1em;
     border: none;
@@ -70,7 +74,7 @@ hr {
     transition: background-color 0.3s ease;
 }
 
-.form_Container #form_Reset  {
+.form_Container #form_Reset {
     padding: 10px 20px;
     font-size: 1em;
     border: none;
@@ -86,7 +90,8 @@ hr {
 }
 
 .content_Container {
-    display: none;
+    /* Changed to flex so it shows when .hide is removed */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -126,11 +131,24 @@ hr {
     color: white;
     }
 
-.cells:hover {
+.cells:hover:not([data-marker]) { /* Added :not([data-marker]) so marked cells don't change */
     background-color: grey;
     transition: background-color 0.3s ease;
     color: black;
 }
+
+.win-cell {
+    background-color: yellow;
+}
+
+/* Specific styling for markers */
+.x-marker {
+    color: #4CAF50; /* Green for X */
+}
+.o-marker {
+    color: #F44336; /* Red for O */
+}
+
 
 .game_Footer {
     font-size: 1.2em;
